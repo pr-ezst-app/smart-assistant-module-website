@@ -1,6 +1,6 @@
 import os
 import json
-from openai import OpenAI
+from openai import OpenAI  # v2
 
 CORS_HEADERS = {
     "Access-Control-Allow-Origin": "*",
