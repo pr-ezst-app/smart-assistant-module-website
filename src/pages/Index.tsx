@@ -275,7 +275,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="relative z-10 py-8 px-6 text-center" style={{ borderTop: "1px solid rgba(99, 102, 241, 0.1)" }}>
         <p className="text-xs" style={{ color: "var(--sam-muted)", fontFamily: "'Space Mono', monospace" }}>
-          smartassistantmodule.com © 2026 · Built with intelligence by William Lau
+          smartaimodule.com © 2026 · Built with intelligence by William Lau
         </p>
       </footer>
     </div>
