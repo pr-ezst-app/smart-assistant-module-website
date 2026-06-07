@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Chat with S.A.M",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "messages": [{ "role": "user", "content": "Say hello in one word." }],
+        "settings": { "tone": "casual", "length": "concise", "expertise": "beginner" }
+      },
+      "expectedStatus": 200,
+      "expectedBody": { "reply": "string" },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
