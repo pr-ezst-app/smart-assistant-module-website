@@ -65,9 +65,12 @@ def handler(event: dict, context) -> dict:
 
     system_prompt = build_system_prompt(settings)
 
-    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    client = OpenAI(
+        api_key=os.environ["OPENROUTER_API_KEY"],
+        base_url="https://openrouter.ai/api/v1",
+    )
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="openai/gpt-4o",
         messages=[{"role": "system", "content": system_prompt}] + messages,
         max_tokens=1500,
         temperature=0.7,
